@@ -1,0 +1,7 @@
+{
+  "name": "silverCare",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
