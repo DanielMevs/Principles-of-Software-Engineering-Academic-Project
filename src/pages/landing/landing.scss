@@ -1,0 +1,51 @@
+page-landing {
+    ion-content{
+        width: 100%;
+        height: 100%;
+        background-image: url('../../assets/imgs/landing_bg.jpg');
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: 7%;
+    }
+
+    #landing-title{
+        width: 100%;
+        height: 15%;
+        //background-color: red;
+        margin: 0 auto;
+    }
+
+    #landing-title h1{
+        font-size: 37px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    #landing-title p{
+        font-size: 22px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    button{
+        width: 100%;
+        font-weight: bold;
+    }
+
+    .button-ios{
+        height: 2.3em;
+    }
+
+    #signup{
+        margin-bottom: 2%;
+    }
+
+    #login{
+        background-color: white !important;
+        color:black !important;
+        
+    }
+    
+}
