@@ -1,18 +1,37 @@
-<!--
-  Generated template for the SignupPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>signup</ion-title>
+    <ion-title>Create Account</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <br><br/>
+  <form [formGroup]="signupValidation">
+    <ion-grid>
+        <ion-item>
+            <ion-input type="email" placeholder="Email" name="email" formControlName="email"></ion-input>
+        </ion-item>
+          <p class="style_emessages" *ngIf="email.hasError('required') && email.touched">*Enter valid email</p>
+          <p class="style_emessages" *ngIf="email.hasError('pattern') && email.touched">*Email entered is not valid</p>
+          <br><br/>
+        <ion-item>
+            <ion-input type="password" placeholder="Password" name="password" formControlName="password"></ion-input>
+        </ion-item>
+            <p class="style_emessages" *ngIf="password.hasError('required') && password.touched">*Enter password</p>
+            <br><br/>
+            <ion-item>
+              <ion-input type="password" placeholder="Confirm Password" name="confirmPassword" formControlName="confirmPassword"></ion-input>
+          </ion-item>
+              <p class="style_emessages" *ngIf="confirmPassword.hasError('required') && confirmPassword.touched">*Enter confirm password</p>
+              <p class="style_emessages" *ngIf="confirmPassword.hasError('equalTo')">*Password must match confirm password</p>
+              <br><br/>
+  </ion-grid>
+  </form>
+  <p id="signuperror_message"></p>
 </ion-content>
+
+<ion-footer padding>
+    <button ion-button color="primary" id="signup" (click)="signup()" [disabled]="!signupValidation.valid">SIGN UP</button>
+ </ion-footer>

@@ -25776,3 +25776,79 @@ page-landing #login {
   background-color: white !important;
   color: black !important;
 }
+
+page-login ion-header .toolbar {
+  position: absolute;
+}
+
+page-login ion-header .toolbar .toolbar-background {
+  background: transparent;
+}
+
+page-login ion-header .toolbar .toolbar-title {
+  color: #333;
+}
+
+page-login .header-ios .toolbar-background-ios, page-login .footer-ios .toolbar-background-ios {
+  border-style: none;
+}
+
+page-login .bar-button {
+  color: #333 !important;
+  margin-left: 2% !important;
+}
+
+page-login #login {
+  width: 100%;
+  font-weight: bold;
+}
+
+page-login .button-ios {
+  height: 2.3em;
+}
+
+page-login .style_emessages {
+  color: red;
+}
+
+page-login #signuperror_message {
+  color: red;
+}
+
+page-signup ion-header .toolbar {
+  position: absolute;
+}
+
+page-signup ion-header .toolbar .toolbar-background {
+  background: transparent;
+}
+
+page-signup ion-header .toolbar .toolbar-title {
+  color: #333;
+}
+
+page-signup .header-ios .toolbar-background-ios, page-signup .footer-ios .toolbar-background-ios {
+  border-style: none;
+}
+
+page-signup .bar-button {
+  color: #333 !important;
+  margin-left: 2% !important;
+}
+
+page-signup #signup {
+  width: 100%;
+  font-weight: bold;
+}
+
+page-signup .button-ios {
+  height: 2.3em;
+}
+
+page-signup .style_emessages {
+  color: red;
+}
+
+page-signup #signuperror_message {
+  color: red;
+}

@@ -1,18 +1,30 @@
-<!--
-  Generated template for the LoginPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>login</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
-</ion-content>
+    <ion-navbar>
+      <ion-title>Log In</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+      <form [formGroup]="formgroup">
+        <ion-list>
+            <br><br/>
+            <ion-item>
+                <ion-input type="email" placeholder="Email" name="email" formControlName="email"></ion-input>
+            </ion-item>
+            <br><br/>
+              <p class="style_emessages" *ngIf="email.hasError('required') && email.touched">*Email is required</p>
+              <p class="style_emessages" *ngIf="email.hasError('pattern') && email.touched">*Email entered is not valid</p>
+            <ion-item>
+                <ion-input type="password" placeholder="Password" name="password" formControlName="password"></ion-input>
+            </ion-item>
+                <p class="style_emessages" *ngIf="password.hasError('required') && password.touched">*Password is required</p>
+        </ion-list>
+      </form>
+      <p id="error_message"></p>
+    </ion-content>
+  
+  <ion-footer padding>
+      <button ion-button color="primary" id="login" (click)="login()" [disabled]="!formgroup.valid">LOG IN</button>
+   </ion-footer>

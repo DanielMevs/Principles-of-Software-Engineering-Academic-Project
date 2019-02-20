@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
+import { SignupPage } from '../signup/signup';
+import { LoginPage } from '../login/login';
 /**
  * Generated class for the LandingPage page.
  *
@@ -24,6 +26,14 @@ export class LandingPage {
 
   page(){
     this.appCtrl.getRootNav().setRoot(TabsPage);
+  }
+
+  signup(){
+    this.navCtrl.push(SignupPage);
+  }
+
+  login(){
+    this.navCtrl.push(LoginPage);
   }
 
 }

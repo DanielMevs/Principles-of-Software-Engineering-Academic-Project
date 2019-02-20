@@ -1,3 +1,40 @@
 page-signup {
+    ion-header {
+        .toolbar {
+          position: absolute;
+      
+          .toolbar-background {
+            background: transparent;
+          }
+          .toolbar-title {
+            color: #333;
+          }
+        }
+      }
 
+      .header-ios .toolbar-background-ios, .footer-ios .toolbar-background-ios{
+        border-style: none;
+    }
+
+    .bar-button{
+        color: #333 !important;
+        margin-left: 2% !important; 
+    }
+
+    #signup{
+        width: 100%;
+        font-weight: bold;
+    }
+
+    .button-ios{
+        height: 2.3em;
+    }
+      
+    .style_emessages{
+      color:red;
+  }
+
+  #signuperror_message{
+      color:red;
+  }
 }
